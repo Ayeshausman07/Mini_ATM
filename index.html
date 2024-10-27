@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Interface Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <script src="script.js"></script>
+ 
+</head>
+<body>
+
+    <style>
+    
+
+    body {
+            background: linear-gradient(to right, #3a6186, #89253e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* ATM Card Styling */
+        .atm-card {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .atm-image {
+            width: 80px; /* Set width to a smaller size */
+            height: 80px; /* Set height to a smaller size */
+            margin-bottom: 15px;
+        }
+
+        /* Button Styling */
+        .atm-btn {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .atm-btn i {
+            margin-right: 10px;
+        }
+
+        /* Fade Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+<div class="atm-card card">
+    <div class="card-header">
+        <i class="fas fa-credit-card"></i> ATM Interface
+    </div>
+    <div class="card-body text-center">
+        <img class="atm-image" src="https://media.lordicon.com/icons/wired/gradient/2365-tapping-credit-card.gif" class="rounded-circle mb-3" alt="ATM Logo">
+        <p id="atm-message" class="font-weight-bold">Please set your PIN to start.</p>
+        <input type="password" id="pin-input" class="form-control mb-3" placeholder="Enter PIN">
+
+        <div id="atm-actions" class="text-center mt-3">
+            <button onclick="setPin()" class="btn btn-primary atm-btn btn-block">
+                <i class="fas fa-key"></i> Set PIN
+            </button>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
